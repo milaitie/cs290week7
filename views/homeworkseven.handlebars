@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET and POST Checker</title>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+</head>
+<body>
+    <h1>{{method}} Request Received</h1>
+<fieldset>
+    <legend>URL Query</legend>
+    <table>
+        <tbody>
+           <ul>
+            {{#each dataList}}
+                <li>{{this.getname}}: {{this.getvalue}}
+            {{/each}}
+           </ul>
+        </tbody>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Request Body</legend>
+    <table>
+        <tbody>
+           <ul>
+            {{#each dataList}}
+                <li>{{this.postname}}: {{this.postvalue}}
+            {{/each}}
+           </ul>
+        </tbody>
+    </table>
+</fieldset>
+
+
+</body>
+</html>
+Code highlighting thanks to CODE MIRROR
